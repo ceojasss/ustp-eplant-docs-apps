@@ -1,0 +1,52 @@
+/* .field{
+  float: left;
+  width: 8cm;
+  padding: 10px;
+} */
+.column-custom > .field.field-inputSmall > .ui.input {
+  width: 5cm;
+}
+.column-custom > .field.field-inputMedium > .ui.input {
+  width: 12cm;
+}
+.column-custom > .field.field-inputLarge > .ui.input {
+  width: 17cm;
+}
+
+.column-custom > .field.field-inputLov > .ui.input {
+  /* background-color: red; */
+  width: 12cm;
+  /* padding-right: 2cm; */
+}
+.column-custom > .field.field-inputLov > .ui.input > input {
+  /* background-color: red; */
+  width: 30%;
+  /* padding-right: 2cm; */
+}
+.column-custom > .field.field-inputLov > .ui.input > .ui.large.label {
+  /* background-color: red; */
+  width: 70%;
+  /* padding-right: 2cm; */
+}
+.column-custom > .field.field-inputArea {
+  /* background-color: red; */
+  width: 7cm;
+  /* height: 7cm; */
+}
+.column-custom > .field.field-inputArea > textarea {
+  /* background-color: red; */
+  height: 2cm;
+  resize: none;
+}
+.column-custom > .field.field-select {
+  /* background-color: red; */
+  width: 7cm;
+}
+
+.column-custom {
+  float: left;
+  max-width: 18cm;
+  padding-left: 0.5cm;
+  padding-right: 0.5cm;
+  padding-bottom: 0.2cm;
+}

@@ -1,0 +1,42 @@
+version: "3"
+services:
+  client:
+    container_name: client
+    build:
+      context: .
+      dockerfile: Dockerfile.single
+      target: production
+      args:
+        GENERATE_SOURCEMAP: false
+        REACT_APP_URLS: apiiwork.ustp.co.id
+        REACT_APP_LOGIN: iWork
+        HTTPS: true
+        REACT_APP_SINGLE_PORT: true
+        REACT_APP_HTTPS: https
+        SSL_CRT_FILE: ./reactcert/serverCert.pem
+        SSL_KEY_FILE: ./reactcert/ustp.co.id.key
+        SSL_CA_FILE: ./reactcert/Chain_RootCA_Bundle.crt
+        REACT_APP_LOGO: /ustp_logo.png
+    # command: npm run startprod
+    volumes: 
+      - .:/app/frontend
+      - library_frontend:/app/frontend/node_modules
+      - /reactcert/:/app/frontend/reactcert
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+    # env_file:
+    #   - .env
+    # environment:
+    #     NODE_ENV: eproc
+    #     HTTPS: true
+    # env_file:
+    #   - ./config/eproc.env
+    # environment:
+    #   - HTTPS='true'
+    environment:
+      - NODE_ENV=production
+volumes:
+  library_frontend:
+    driver: local

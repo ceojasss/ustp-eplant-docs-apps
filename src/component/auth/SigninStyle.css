@@ -1,0 +1,52 @@
+.column {
+  /* max-width: 500px; */
+}
+/*body {
+  background-color: #dadada;
+}
+ body > .grid {
+  height: 100%;
+} */
+.image {
+  margin-top: -100px;
+}
+
+.select {
+  height: 150%;
+}
+
+.select option {
+  padding: 6px !important;
+}
+/* .img{
+    position: relative; 
+}
+.img::before{
+  content: '';
+  background-image: url("../../../public/USTP\ \(Warna\).png") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-size: 70vw 80vh;
+  top:0px;
+  left: 20vw;
+  width:96vw;
+  height:100%;
+  opacity: 0.2; 
+} */
+.img{
+  background-image: url("../../../public/USTP\ \(Warna\).png") ;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  /* position: fixed; */
+  /* margin-top: 10vh; */
+  /* width:100%; */
+  height:100%;
+  background-size: 100%;
+}
+.ui.fluid.container{
+background-color: gainsboro; 
+/* z-index: -1000; */
+height: 100vh;
+padding: 100px;
+}

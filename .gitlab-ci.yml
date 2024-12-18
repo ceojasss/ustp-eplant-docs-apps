@@ -1,0 +1,194 @@
+image: docker
+
+services:
+  - docker:dind
+
+stages:
+  - development
+  - production
+  - productionbackup
+  - fesje
+  - feslm
+  - fesbe
+  - fesmg
+  - fegcm
+  - fesingle
+# testing hheehehhehecobalagiteshehehehehehhetess    - docker-compose down - docker-compose up -d --build
+development:
+  stage: development
+  tags:
+    - devfrontend
+  only: 
+    - main
+  script:
+    # - apk update && apk add git
+    # - git checkout main 
+    - git pull origin main
+    - sudo docker-compose -f docker-compose.yml down
+    - docker volume rm eplant2-0_library_frontend
+    - sudo docker-compose -f docker-compose.yml build
+    - sudo COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-compose.yml up -d
+
+production:
+  stage: production
+  tags:
+    - prodfrontend
+  only:
+    - production
+  script:
+    - git checkout production 
+    - git pull origin production
+    - docker-compose -f docker-composeprod.yml down
+    - docker volume rm eplant2-0_library_frontend
+    - docker-compose -f docker-composeprod.yml build
+    - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-composeprod.yml up -d
+  environment: production
+  when: manual
+
+productionbackup:
+  stage: productionbackup
+  tags:
+    - prodfrontend2
+  only:
+    - productionbackup
+  script:
+    - git checkout productionbackup 
+    # - git reset --hard productionbackup
+    # - git rebase --abort
+    # - git rebase productionbackup
+    - git pull origin productionbackup
+    # - git merge origin/productionbackup
+    - docker-compose -f docker-composeprodbackup.yml down
+    - docker volume rm eplant2-0_library_frontend
+    - docker-compose -f docker-composeprodbackup.yml build
+    - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-composeprodbackup.yml up -d
+  environment: productionbackup
+  when: manual
+
+fesingle:
+  stage: fesingle
+  tags:
+    - fesingle
+  only:
+    - productionbackup
+  script:
+    - git checkout productionbackup 
+    # - git reset --hard productionbackup
+    # - git rebase --abort
+    # - git rebase productionbackup
+    - git pull origin productionbackup
+    # - git merge origin/productionbackup
+    # - docker-compose -f docker-composeprodbackup.yml down
+    # - docker volume rm eplant2-0_library_frontend
+    - docker compose -f docker-composesingle.yml down
+    - docker rmi eplant2-0-client:latest
+    - docker volume rm eplant2-0_library_frontend
+    - docker compose -f docker-composesingle.yml build
+    - COMPOSE_HTTP_TIMEOUT=200 docker compose -f docker-composesingle.yml up -d
+  environment: fesingle
+  # when: manual
+
+fesje:
+  stage: fesje
+  tags:
+    - fesje
+  only:
+    - site
+  script:
+    - git checkout site 
+    # - git reset --hard productionbackup
+    # - git rebase --abort
+    # - git rebase productionbackup
+    # - git pull origin site
+    - git pull origin site --allow-unrelated-histories --rebase
+    # - git merge origin/productionbackupss
+    - docker-compose -f docker-composesje.yml down
+    - docker volume rm eplant2-0_library_frontend
+    - docker-compose -f docker-composesje.yml build
+    - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-composesje.yml up -d
+  environment: fesje
+  when: manual
+
+feslm:
+  stage: feslm
+  tags:
+    - feslm
+  only:
+    - site
+  script:
+    - git checkout site 
+    # - git reset --hard productionbackup
+    # - git rebase --abort
+    # - git rebase productionbackup
+    # - git pull origin site
+    - git pull origin site --allow-unrelated-histories --rebase
+    # - git merge origin/productionbackup
+    # - docker-compose -f docker-composeslm.yml down
+    # - docker volume rm eplant2-0_library_frontend
+    - docker-compose -f docker-composeslm.yml build
+    - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-composeslm.yml up -d
+  environment: feslm
+  when: manual
+
+fesbe:
+  stage: fesbe
+  tags:
+    - fesbe
+  only:
+    - site
+  script:
+    - git checkout site 
+    # - git reset --hard productionbackup
+    # - git rebase --abort
+    # - git rebase productionbackup
+    # - git pull origin site
+    - git pull origin site --allow-unrelated-histories --rebase
+    # - git merge origin/productionbackup
+    # - docker-compose -f docker-composesbe.yml down
+    # - docker volume rm eplant2-0_library_frontend
+    - docker-compose -f docker-composesbe.yml build
+    - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-composesbe.yml up -d
+  environment: fesbe
+  when: manual
+
+fesmg:
+  stage: fesmg
+  tags:
+    - fesmg
+  only:
+    - site
+  script:
+    - git checkout site 
+    # - git reset --hard productionbackup
+    # - git rebase --abort
+    # - git rebase productionbackup
+    # - git pull origin site
+    - git pull origin site --allow-unrelated-histories --rebase
+    # - git merge origin/productionbackup
+    - docker-compose -f docker-composesmg.yml down
+    - docker volume rm eplant2-0_library_frontend
+    - docker-compose -f docker-composesmg.yml build
+    - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-composesmg.yml up -d
+  environment: fesmg
+  when: manual
+
+fegcm:
+  stage: fegcm
+  tags:
+    - fegcm
+  only:
+    - site
+  script:
+    - git checkout site 
+    # - git reset --hard productionbackup
+    # - git rebase --abort
+    # - git rebase productionbackup
+    # - git pull origin site
+    - git pull origin site --allow-unrelated-histories --rebase
+    # - git merge origin/productionbackup
+    - docker-compose -f docker-composegcm.yml down
+    - docker volume rm eplant2-0_library_frontend
+    - docker-compose -f docker-composegcm.yml build
+    - COMPOSE_HTTP_TIMEOUT=200 docker-compose -f docker-composegcm.yml up -d
+  environment: fegcm
+  when: manual

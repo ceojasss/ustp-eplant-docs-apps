@@ -1,0 +1,154 @@
+
+/* Date Picker Styling */
+.date-picker {
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1.5px solid black;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    margin-top: 5px;
+    position: absolute;
+    left: 0; position: absolute;
+    z-index: 1;
+  }
+  
+  
+  
+  .select-site {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s,
+    -webkit-box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  }
+  .container {
+    display: flex;
+    overflow: auto;
+    position: relative;
+    /* border: 2px solid red; */
+    /* border: 2px; */
+  }
+  
+  .table {
+    position: relative; /* Mengatur posisi relatif pada Table */
+    z-index: 0; /* Menempatkan Table di belakang Date Picker */
+  }
+  
+  .date-picker-container label {
+    margin-right: 0.5em;
+    /* border: 1px solid blue; */
+  }
+  .label {
+    font-size: 15px;
+  }
+  .react-datepicker__year-text {
+    font-size: 14px;
+  }
+  
+  .react-datepicker__year-option {
+    margin: 0.4rem;
+    width: 200px;
+    height: 30px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media only screen and (max-width: 1336px) {
+    /* CSS untuk saat sidebar ditutup */
+    .segment-container {
+      overflow: scroll;
+      height: 60vh;
+      width: 100%;
+      margin-left: 10px !important;
+      margin-right: 50px !important;
+      /* overflow-Y: hidden; */
+    }
+  
+    .tab.menu {
+      display: flex;
+      /* Sesuaikan lebar tab dengan ukuran yang diinginkan */
+      width: 100%;
+      /* Sesuaikan jumlah tab yang ditampilkan dalam satu baris */
+      flex-wrap: wrap;
+      /* Atur overflow agar dapat di-scroll secara horizontal */
+      overflow-x: auto;
+      /* Tambahkan padding pada tab agar tidak terpotong saat zoom */
+      padding: 0 10px;
+    }
+  
+    .tab.menu .item {
+      /* Sesuaikan lebar masing-masing tab */
+      min-width: 100px;
+      /* Sesuaikan padding pada tab agar terlihat lebih lebar */
+      padding: 10px;
+      flex-basis: 50%;
+    }}
+  
+  @media only screen and (min-width: 1336px) {
+    /* CSS untuk saat sidebar ditutup */
+    .segment-container {
+      overflow: scroll;
+      height: 20vh;
+      width: 100%;
+      margin-left: 10px !important;
+      margin-right: 50px !important;
+      /* overflow-Y: hidden; */
+    }
+    
+  }
+  @media only screen and (max-width: 1280px) {
+    /* CSS untuk saat sidebar ditutup */
+    .segment-container {
+      overflow: scroll;
+      height: 60vh;
+      width: 100%;
+      margin-left: 10px !important;
+      margin-right: 105px !important;
+      /* overflow-Y: hidden; */
+    }
+    
+  }
+  @media only screen and (min-width: 1282px) {
+    /* CSS untuk saat sidebar ditutup */
+    .segment-container {
+      overflow: scroll;
+      height: 70vh;
+      width: 100%;
+      margin-left: 10px !important;
+      margin-right: 105px !important;
+      /* overflow-Y: hidden; */
+    }
+    
+  }
+  .tab-menu-item {
+    font-size: 100px;
+  }
+  .pie-container {
+    border: 4px solid black;
+    width: 50vh;
+    height: 50vh;
+    margin-bottom: 20px;
+  }
+  .bartab-container {
+    padding: 15px;
+    border: 2px solid black;
+    justify-content: center;
+  }
+  .tabcontainer{
+    background-color: aqua;
+  }

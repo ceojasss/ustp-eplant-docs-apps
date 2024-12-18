@@ -1,0 +1,95 @@
+/* Date Picker Styling */
+.date-picker-container label {
+  margin-right: 0.5em;
+  /* border: 1px solid blue; */
+}
+
+.date-picker {
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1.5px solid black;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    margin-top: 5px;
+    position: absolute;
+    left: 0; 
+    position: absolute;
+    
+  }
+  
+.table-data{
+  position: relative; /* Mengatur posisi relatif pada Table */
+  z-index: 0!important; /* Menempatkan Table di belakang Date Picker */
+  width: 100%;
+  
+}
+.label {
+  font-size: 15px;
+}
+
+.select-site {
+  display: block;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.select-plasma {
+  display: block;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.select-afdeling {
+  display: block;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.select-estate {
+  display: block;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.container-loading-status {
+  margin-top: 3rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+
+
+
+  

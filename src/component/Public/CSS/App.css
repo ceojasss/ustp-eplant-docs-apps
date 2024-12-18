@@ -1,0 +1,415 @@
+/* .field{
+  float: left;
+  width: 8cm;
+  padding: 10px;
+} */
+/* .column-custom > .field.field-inputSmall > .ui.input {
+  width: 5cm;
+}
+.column-custom > .field.field-inputMedium > .ui.input {
+  width: 12cm;
+}
+.column-custom > .field.field-inputLarge > .ui.input {
+  width: 17cm;
+} */
+@media only screen and (max-width: 1366px) {
+  .ui.error.icon.message {
+    margin-left: -24vw;
+    width: 54vw;
+  }
+}
+
+@media only screen and (min-width: 1367px) {
+  .ui.error.icon.message {
+    margin-left: -27vw;
+    width: 50vw;
+  }
+}
+
+#reader {
+  background-color: #adb5bd;
+  color: #282c34;
+  font-size: 12pt;
+}
+
+
+/* body{
+background-image:url("../../../../public/USTP\ \(Warna\).png");  
+width: unset;
+} */
+.imgs {
+  position: relative;
+}
+
+.imgs::before {
+  content: '';
+  background-image: url("../../../../public/USTP\ \(Warna\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-size: 70vw 80vh;
+  top: 0px;
+  left: 10vw;
+  width: 96vw;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.field.inputTiniest {
+  width: 1.5cm;
+  font-size: smaller;
+}
+
+.field.inputTiny {
+  width: 2cm;
+  font-size: x-small;
+}
+
+.field.inputDate {
+  width: 2.5cm;
+  font-size: x-small;
+}
+
+.field.inputTime {
+  width: 2.5cm;
+  font-size: x-small;
+  z-index: 9999;
+}
+
+.field.inputSmaller {
+  width: 3cm;
+  font-size: x-small;
+}
+
+.field.inputSmall {
+  width: 4cm;
+  font-size: x-small;
+}
+
+.field.inputSmallmed {
+  width: 4.5cm;
+  font-size: x-small;
+}
+
+.field.inputMini {
+  width: 6cm;
+  font-size: x-small;
+}
+
+.field.inputMedium {
+  width: 10cm;
+  font-size: x-small;
+}
+
+.field.inputLarge {
+  width: 12cm;
+  font-size: x-small;
+}
+
+.field.inputHuge {
+  width: 16cm;
+  font-size: x-small;
+}
+
+.field.inputFull {
+  width: 100%;
+  font-size: smaller;
+}
+
+
+.field.inputArea {
+  /* background-color: red; */
+  width: 7cm;
+  font-size: smaller;
+  /* height: 7cm; */
+}
+
+.field.inputArea>textarea {
+  /* background-color: red; */
+  height: 2cm;
+  resize: none;
+  font-size: smaller;
+}
+
+.cell.ui.input {
+  padding: 0 !important;
+  font-size: smaller !important;
+  /* padding-top: 0px !important;
+  padding-bottom: 0px !important; */
+}
+
+.fix {
+  position: sticky;
+  background: white;
+  font-size: smaller;
+}
+
+
+.ui.table>thead>tr>.action {
+  position: sticky;
+  right: 0;
+  padding: 0.3em !important;
+  width: 500px !important;
+}
+
+.ui.table>tbody>tr>.action {
+  position: sticky;
+  right: 0;
+  padding: 0.3em !important;
+  width: 500px !important;
+}
+
+
+.fix:first-child {
+  left: 0;
+  width: 120px;
+  z-index: 1000;
+}
+
+.fix:last-child {
+  right: 0;
+  width: 150px;
+}
+
+.ui.table>thead>tr>.theadinputslim {
+  width: 10px;
+  padding: 0.3em !important
+}
+
+.ui.table>thead>tr>.theadslim {
+  padding: 0.3em !important;
+  z-index: 100000;
+  font-size: x-small;
+  font-weight: bold;
+}
+
+.ui.table>thead>tr>.theadslimCb {
+  padding-top: 0.5em !important;
+  padding-bottom: 0em !important;
+  padding-left: 0.8em !important;
+  z-index: 100000;
+  font-size: x-small;
+  font-weight: bold;
+  /* font-size: 10pt; */
+}
+
+.ui.table>thead>tr>.theadslimfix {
+  padding: 0.3em !important;
+  position: sticky;
+  background: white;
+  font-size: x-small;
+  font-weight: bold;
+}
+
+.ui.table>thead>tr>.theadslimfix:first-child {
+  left: 0;
+  width: 120px;
+}
+
+.ui.table>thead>tr>.theadslimfix:last-child {
+  right: 0;
+}
+
+.ui.table>tfoot>tr>.theadslimfix {
+  padding: 0.3em !important;
+  position: sticky;
+  background: white;
+}
+
+.ui.table>tfoot>tr>.theadslimfix:first-child {
+  left: 0;
+  width: 120px;
+}
+
+.ui.table>tfoot>tr>.theadslimfix:last-child {
+  right: 0;
+  width: 120px;
+}
+
+.ui.table>tbody>tr>.tbodyViewSlim {
+  padding: 0.3em !important;
+  font-size: 9pt;
+}
+
+.ui.table>tbody>tr>.tbodyViewSlimCB {
+  padding-top: 0.5em !important;
+  padding-bottom: 0em !important;
+  padding-left: 0.8em !important;
+  font-size: 9pt;
+}
+
+.ui.table>tbody>tr>.tbodyslim {
+  padding: 0.3em !important;
+  font-size: 9pt;
+  width: 10%;
+}
+
+.ui.table>tbody>tr>.tbodyinputslim {
+  padding: 0.3em !important;
+  font-size: 9pt;
+  width: 15%;
+}
+
+.ui.table>thead>tr>.inputSmall {
+  padding: 0.3em !important;
+  z-index: 100000;
+  font-size: smaller;
+}
+
+.ui.table>thead>tr>.inputMedium {
+  padding: 0.3em !important;
+  z-index: 100000;
+  font-size: smaller;
+}
+
+/* .ui.table>thead>tr>.inputLarge {
+  padding: 0.3em !important
+} */
+
+
+.ui.table>tbody>tr>.inputSmall {
+  padding: 0.1em !important;
+  font-size: 9pt;
+  width: fit-content;
+}
+
+.ui.table>tbody>tr>.inputMedium {
+  padding: 0.1em !important;
+  padding-left: 0.5em !important;
+  font-size: 9pt;
+  /* width: 40%; */
+}
+
+/* .ui.table>tbody>tr>.inputLarge {
+  padding: 0.1em !important;
+  padding-left: 0.5em !important;
+  font-size: 9pt;
+  width: 1px;
+} */
+
+
+
+
+@media screen and (max-width: 1440px) {
+  .ui.raised.segment {
+    overflow-x: scroll;
+    /* background-color: aqua; */
+  }
+
+  .form-container {
+    height: 75vh;
+    /* height: 75vh; */
+    width: 100%;
+    margin-left: 10px !important;
+    margin-right: 70px !important;
+    /* margin-left: 70px !important;
+    margin-right: 40px !important; */
+    overflow-Y: hidden;
+  }
+}
+
+@media screen and (min-width: 1442px) {
+  .ui.raised.segment {
+    overflow-x: scroll;
+  }
+
+  .form-container {
+    height: 80vh;
+    width: 100%;
+    margin-left: 10px !important;
+    margin-right: 70px !important;
+    /* height: 80vh;
+    width: 100vw;
+    margin-left: 70px !important; */
+    /*     margin-right: 50px !important;
+     */
+    overflow-Y: hidden;
+  }
+}
+
+/* Hide the calendar icon in Chrome and Edge */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Hide the calendar icon in Firefox */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the calendar icon in Safari */
+input[type="date"]::-webkit-clear-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+iframe#webpack-dev-server-client-overlay {
+  display: none;
+}
+
+/* add tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltiptextTop {
+  visibility: hidden;
+  width: 200px;
+  /*  max-width: 200px; */
+  background-color: black;
+  opacity: 50%;
+  color: whitesmoke;
+  text-align: center;
+  font-size: x-small;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 99999;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptextLeft {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+
+
+.tooltip:hover .tooltiptextLeft {
+  visibility: visible;
+}
+
+.tooltip:hover .tooltiptextTop {
+  visibility: visible;
+}
+
+.field.inputSmall>div {
+  /* margin-right: 3cm;
+  margin-left: 0.1cm; */
+  /* margin-left: '10px';
+  margin-right: '10px'; */
+}
+
+
+.inputTimeStyle {
+  z-index: 10;
+}
